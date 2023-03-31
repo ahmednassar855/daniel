@@ -1,0 +1,457 @@
+/* Font family */
+@font-face {
+    font-family:Montserrat-Regular ;
+    src: url(../css/fontfamily/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family:Montserrat-Thin;
+    src: url(../css/fontfamily/Montserrat-Thin.ttf);
+}
+
+@font-face {
+    font-family:Montserrat-Bold;
+    src: url(../css/fontfamily/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family:Poppins-Bold;
+    src: url(../css/fontfamily/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family:Poppins-Light;
+    src: url(../css/fontfamily/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family:Poppins-Regular;
+    src: url(../css/fontfamily/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family:Poppins-ExtraLight;
+    src: url(../css/fontfamily/Poppins-ExtraLight.ttf);
+}
+
+
+
+.headerSection{
+    background-image: url(../css/images/bg.jpg);  
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.nav-link{
+    position: relative;
+    color: white;
+}
+
+.nav-link::after{
+    content: " ";
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 10%;
+    right: 100%;
+    background-color: aliceblue;
+    transition: all .5s;
+}
+
+.nav-item:hover .nav-link::after{
+    right: 10%; 
+}
+.headerSection h1 ,h4{
+    font-size: 3rem;
+
+}
+.headerSection h1{
+    font-family: Montserrat-Thin;
+}
+
+.headerSection h4{
+    font-family: Montserrat-Bold;
+}
+.headerSection h1 span{
+    font-family: Montserrat-Regular;
+}
+
+.social-links li a{
+    color: white;
+}
+.social-links li div{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* about section */
+
+.aboutSection{
+    background-color: #FFFFFF;
+}
+.aboutSection .hero {
+    position: relative;
+    vertical-align: middle;
+
+}
+.aboutSection .hero{
+    position: relative;
+    z-index: 1;
+    
+
+}
+
+.aboutSection .hero::after{ 
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(../css/images/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0;
+    z-index: -1;
+    transform: translate(-30px, 30px)
+}
+
+.aboutHeading p{
+    font-size: 1rem;
+    color: #748182;
+    font-family: Poppins-Regular;
+}
+.aboutHeading p:nth-child(1){
+    font-family:Poppins-Bold;
+    font-size: 2rem;
+}
+
+.aboutBtn .downloadBtn{
+    transition: all .5s;
+}
+.aboutBtn .downloadBtn:hover{
+    background-color: white;
+    color: black;
+}
+
+.aboutBtn .contactBtn{
+    transition: all .5s;
+}
+
+.aboutBtn .contactBtn:hover{
+    background-color: black;
+    color: white;
+}
+
+/* service section */
+.serviceSection , .testominalSection , .blogSection{
+    background-color: #f7f7f7;
+}
+
+.serviceHeading h2 ,.portfolioHeading h2 ,.testominalHeading h2 ,.blogHeading h2 ,.ContactHeading h2{
+    font-family: Montserrat-Bold;
+    position: relative;
+    width: fit-content;
+    z-index: 1;
+}
+
+.serviceHeading h2::after ,.portfolioHeading h2::after ,.testominalHeading h2::after , .blogHeading h2::after ,.ContactHeading h2::after{
+    content: "";
+    width: 100%;
+    height: 30px;
+    background-image: url(../css/images/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+
+.icontItem .icon{    
+    font-size: larger;
+}
+.icontItem{
+    width: 70px;
+    height: 70px;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 50%;
+    transition: all .5s;
+}
+
+.servicesContent:hover .icontItem{
+    background-color: black;
+    color: white;
+}
+
+/* portfolio Section  */
+
+
+.card .portfolioLayer{
+    /* top: 0; */
+    /* bottom: 0; */
+    transition: all .5s;
+}
+
+.card:hover .portfolioLayer{ 
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+}
+
+.portfolioLayer p{
+    display: none;
+    transition: all .5s;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.card:hover .portfolioLayer p{
+    display: flex;
+    margin-bottom: 0px;
+}
+
+.portfolioLayer ul{
+    display: none;
+    transition: all .5s;
+    position: relative;
+    margin-top: 20px;
+}
+.card:hover .portfolioLayer ul{
+    display: flex;    
+    margin-top: 0;
+    padding: 10px;
+}
+
+
+.portfolioIcon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+
+.portfolioLink{
+    position: relative;
+    color: black;
+    text-decoration: none;
+}
+.portfolioLink::after{
+    content: " ";
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 0%;
+    right: 100%;
+    background-color: black;
+    transition: all .5s;
+}
+
+.portfolioLinks li:hover .portfolioLink::after{
+    right: 0%; 
+    color: black;
+}
+
+.portfolioLinks li:hover .portfolioLink{
+    color: black;
+}
+
+/* testominal section */
+
+.carousel-indicators{
+    margin-bottom:unset;
+}
+
+.carousel-indicators [data-bs-target]{
+    /* width: unset; */
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    padding: 1px;
+    background-color: gray;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+/* blog section */
+
+
+.blogBox{
+    margin-bottom: 3rem;
+}
+
+.blogContent{
+    font-size: small;
+}
+
+.blogImage{
+    overflow: hidden;
+}
+
+
+.blogImage img{
+    transition: all 1s;
+}
+
+.blogBox:hover  .blogImage img{
+    transform:  scale(1.5);
+}
+
+.blogContent a{
+    position: relative;
+}
+
+.blogContent a::after{
+    content: " ";
+    position: absolute;
+    height: 2px;
+    top: 100%;
+    left: 0%;
+    right: 0%;
+    background-color: black;
+
+}
+
+
+/* contact section */
+
+.contactIcon{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color:  #f4f4f4;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+}
+
+.contactItems:hover .contactIcon{
+    background-color: black;
+    color: white;
+}
+
+.contactData .form-control{
+    background: #f4f4f4;
+}
+
+
+/* anikmation keyfram */
+
+.headerSection h1 span::after{
+    content: "";
+    animation: typing 10s alternate;
+}
+
+
+/* Larry Daniels   = developer */
+@keyframes typing {
+    0%{
+        content: "La";
+    }
+
+    10%{
+        content: "Lar|";
+    }
+    15%{
+        content: "Larry";
+    }
+    20%{
+        content: "Larry Dan|";
+    }
+
+    25%{
+        content: "Larry Daniels";
+    }
+
+    25%{
+        content: "Larry Dani";
+    }
+
+    25%{
+        content: "Larry";
+    }
+    
+    30%{
+        content: "L|";
+    }
+    
+    35%{
+        content: "";
+    }
+    
+    40%{
+        content: "De|";
+    }
+    45%{
+        content: "Deve";
+    }
+    
+    50%{
+        content: "Develo|";
+    }
+    
+    55%{
+        content: "Developer";
+    }
+
+    60%{
+        content: "Develop|";
+    }
+    
+    65%{
+        content: "Devel";
+    }
+
+    
+    70%{
+        content: "De|";
+    }
+
+    
+    75%{
+        content: "|";
+    }
+    
+    80%{
+        content: "Lar";
+    }
+
+
+    85%{
+        content: "Larry|";
+    }
+
+    
+    90%{
+        content: "Larry Dan";
+    }
+
+    
+    95%{
+        content: "Larry Danie|";
+    }
+
+    
+    100%{
+        content: "Larry Daniels";
+    }
+}
